@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kuchnie Świata</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #1e1e2f, #2c2c54);
+    color: white;
+}
+
+header {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+header h1 {
+    font-size: 3rem;
+    letter-spacing: 3px;
+}
+
+header p {
+    margin-top: 15px;
+    opacity: 0.8;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 40px;
+}
+
+.card {
+    background: #2f3640;
+    border-radius: 15px;
+    padding: 25px;
+    transition: 0.4s;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.03);
+    background: #353b48;
+}
+
+.card h2 {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    color: #fbc531;
+}
+
+.card h3 {
+    margin: 10px 0;
+    color: #00a8ff;
+}
+
+.card ul {
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.card button {
+    margin-top: 15px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    background: #e84118;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.card button:hover {
+    background: #c23616;
+}
+
+.hidden {
+    display: none;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    background: #111;
+    margin-top: 40px;
+    font-size: 0.9rem;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>🌍 Kuchnie Świata</h1>
+    <p>Podróż kulinarna przez różne kontynenty</p>
+</header>
+
+<div class="container">
+
+    <div class="card">
+        <h2>🇹🇭 Tajlandia</h2>
+        <h3>Pad Thai</h3>
+        <p>Smażony makaron ryżowy z warzywami, jajkiem i krewetkami.</p>
+        <button onclick="toggle(this)">Pokaż przepis</button>
+        <div class="hidden">
+            Makaron ryżowy namocz w wodzie. Podsmaż czosnek, dodaj jajko,
+            krewetki, makaron i sos (sojowy + tamaryndowy). Posyp orzeszkami.
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>🇫🇷 Francja</h2>
+        <h3>Crepes</h3>
+        <p>Cienkie naleśniki podawane na słodko lub słono.</p>
+        <button onclick="toggle(this)">Pokaż przepis</button>
+        <div class="hidden">
+            Wymieszaj mąkę, mleko, jajka i szczyptę soli.
+            Smaż cienkie naleśniki na maśle. Podawaj z owocami lub serem.
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>🇹🇷 Turcja</h2>
+        <h3>Kebab</h3>
+        <p>Mięso grillowane z przyprawami, podawane w picie lub lawaszu.</p>
+        <button onclick="toggle(this)">Pokaż przepis</button>
+        <div class="hidden">
+            Zamarynuj mięso w jogurcie i przyprawach.
+            Grilluj lub smaż, podawaj z warzywami i sosem czosnkowym.
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>🇺🇸 USA</h2>
+        <h3>Burger</h3>
+        <p>Soczysty kotlet wołowy w bułce z dodatkami.</p>
+        <button onclick="toggle(this)">Pokaż przepis</button>
+        <div class="hidden">
+            Uformuj kotlety z wołowiny, grilluj 3–4 min z każdej strony.
+            Podawaj z sałatą, pomidorem i serem cheddar.
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    © 2026 | Projekt: Kuchnie Świata
+</footer>
+
+<script>
+function toggle(button) {
+    const content = button.nextElementSibling;
+    content.classList.toggle("hidden");
+}
+</script>
+
+</body>
+</html>
