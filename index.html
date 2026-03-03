@@ -1,119 +1,231 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Historia Sztucznej Inteligencji</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f6f9;
-            color: #333;
-            line-height: 1.6;
-        }
-        header {
-            background: linear-gradient(135deg, #1e3c72, #2a5298);
-            color: white;
-            padding: 40px 20px;
-            text-align: center;
-        }
-        nav {
-            background: #222;
-            padding: 10px;
-            text-align: center;
-        }
-        nav a {
-            color: white;
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        nav a:hover {
-            color: #4da6ff;
-        }
-        section {
-            padding: 40px 20px;
-            max-width: 1000px;
-            margin: auto;
-        }
-        h2 {
-            color: #1e3c72;
-        }
-        .card {
-            background: white;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
-        footer {
-            background: #1e3c72;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            margin-top: 40px;
-        }
-        .timeline {
-            border-left: 4px solid #1e3c72;
-            padding-left: 20px;
-        }
-        .timeline div {
-            margin-bottom: 20px;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Historia Sztucznej Inteligencji</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #0f172a;
+    color: white;
+}
+
+header {
+    height: 100vh;
+    background: linear-gradient(135deg, #1e3a8a, #9333ea);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 3.5rem;
+    animation: fadeIn 2s ease-in-out;
+}
+
+header p {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+.btn {
+    margin-top: 30px;
+    padding: 12px 25px;
+    background: white;
+    color: #1e3a8a;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #e0e7ff;
+    transform: scale(1.05);
+}
+
+section {
+    padding: 80px 10%;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    text-align: center;
+    color: #a78bfa;
+}
+
+.card {
+    background: #1e293b;
+    padding: 30px;
+    margin: 20px 0;
+    border-radius: 15px;
+    transition: 0.4s;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    background: #334155;
+}
+
+.timeline {
+    position: relative;
+    margin-top: 50px;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    width: 4px;
+    height: 100%;
+    background: #9333ea;
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    width: 50%;
+    padding: 20px 40px;
+    position: relative;
+}
+
+.timeline-item:nth-child(odd) {
+    left: 0;
+    text-align: right;
+}
+
+.timeline-item:nth-child(even) {
+    left: 50%;
+}
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    width: 15px;
+    height: 15px;
+    background: #a78bfa;
+    border-radius: 50%;
+}
+
+.timeline-item:nth-child(odd)::before {
+    right: -8px;
+}
+
+.timeline-item:nth-child(even)::before {
+    left: -8px;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    background: #1e293b;
+    margin-top: 60px;
+    font-size: 0.9rem;
+    color: #94a3b8;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(-20px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+@media(max-width: 900px) {
+    .timeline::before {
+        left: 8px;
+    }
+
+    .timeline-item {
+        width: 100%;
+        padding-left: 40px;
+        text-align: left !important;
+        left: 0 !important;
+    }
+
+    .timeline-item::before {
+        left: 0 !important;
+    }
+}
+</style>
 </head>
+
 <body>
 
 <header>
     <h1>Historia Sztucznej Inteligencji</h1>
-    <p>Od pierwszych koncepcji po współczesne systemy AI</p>
+    <p>Od koncepcji <strong>Alana Turinga</strong> po erę generatywnej AI</p>
+    <a href="#historia" class="btn">Zobacz historię ↓</a>
 </header>
 
-<nav>
-    <a href="#poczatek">Początki</a>
-    <a href="#rozwoj">Rozwój</a>
-    <a href="#wspolczesnosc">Współczesność</a>
-</nav>
+<section id="historia">
+    <h2 class="section-title">Kluczowe Etapy Rozwoju</h2>
 
-<section id="poczatek">
-    <h2>Początki (lata 40.–50.)</h2>
     <div class="card">
-        <p>Początki sztucznej inteligencji sięgają prac <strong>Alana Turinga</strong>, który w 1950 roku zaproponował tzw. Test Turinga jako sposób sprawdzania, czy maszyna może wykazywać inteligencję podobną do ludzkiej.</p>
-        <p>W 1956 roku podczas konferencji w Dartmouth oficjalnie użyto terminu „Artificial Intelligence”, co uznaje się za narodziny tej dziedziny.</p>
+        <h3>1950 – Test Turinga</h3>
+        <p><strong>Alan Turing</strong> zaproponował test sprawdzający, czy maszyna może wykazywać inteligencję porównywalną z człowiekiem.</p>
     </div>
-</section>
 
-<section id="rozwoj">
-    <h2>Rozwój (lata 60.–90.)</h2>
     <div class="card">
-        <p>W kolejnych dekadach rozwijano systemy eksperckie oraz pierwsze programy uczące się. Powstały języki programowania takie jak LISP, które były wykorzystywane w badaniach nad AI.</p>
-        <p>W latach 80. popularność zdobyły sieci neuronowe, choć ich rozwój był ograniczony przez możliwości sprzętowe.</p>
+        <h3>1956 – Konferencja Dartmouth</h3>
+        <p>Podczas konferencji w Dartmouth po raz pierwszy użyto terminu „Artificial Intelligence”. To uznaje się za narodziny AI jako dziedziny nauki.</p>
     </div>
-</section>
 
-<section id="wspolczesnosc">
-    <h2>Współczesność (XXI wiek)</h2>
     <div class="card">
-        <p>Współczesna sztuczna inteligencja opiera się głównie na uczeniu maszynowym (Machine Learning) oraz głębokim uczeniu (Deep Learning).</p>
-        <p>Przełomowym momentem było zwycięstwo programu Deep Blue nad mistrzem świata w szachach Garrym Kasparowem w 1997 roku.</p>
-        <p>Obecnie AI wykorzystywana jest w medycynie, finansach, motoryzacji oraz w systemach takich jak asystenci głosowi czy generatywne modele językowe.</p>
+        <h3>1997 – Deep Blue</h3>
+        <p>Komputer <strong>IBM Deep Blue</strong> pokonał mistrza świata Garry’ego Kasparowa w szachach – przełom w historii AI.</p>
     </div>
-</section>
 
-<section>
-    <h2>Oś czasu</h2>
+    <div class="card">
+        <h3>2010+ – Deep Learning</h3>
+        <p>Rozwój sieci neuronowych i ogromnych zbiorów danych umożliwił powstanie nowoczesnych systemów AI, w tym modeli generatywnych.</p>
+    </div>
+
     <div class="timeline">
-        <div><strong>1950</strong> – Publikacja pracy Alana Turinga o teście inteligencji maszyn.</div>
-        <div><strong>1956</strong> – Konferencja w Dartmouth – narodziny AI jako dziedziny nauki.</div>
-        <div><strong>1997</strong> – Deep Blue pokonuje mistrza świata w szachach.</div>
-        <div><strong>2010+</strong> – Dynamiczny rozwój Deep Learning i sztucznej inteligencji generatywnej.</div>
+        <div class="timeline-item">
+            <h4>1943</h4>
+            <p>Pierwszy matematyczny model neuronu.</p>
+        </div>
+
+        <div class="timeline-item">
+            <h4>1956</h4>
+            <p>Oficjalne narodziny AI.</p>
+        </div>
+
+        <div class="timeline-item">
+            <h4>1980</h4>
+            <p>Rozkwit systemów eksperckich.</p>
+        </div>
+
+        <div class="timeline-item">
+            <h4>1997</h4>
+            <p>Zwycięstwo Deep Blue.</p>
+        </div>
+
+        <div class="timeline-item">
+            <h4>2020+</h4>
+            <p>Era sztucznej inteligencji generatywnej.</p>
+        </div>
     </div>
 </section>
 
 <footer>
-    <p>© 2026 Historia Sztucznej Inteligencji | Strona edukacyjna</p>
+    © 2026 Historia Sztucznej Inteligencji | Strona edukacyjna
 </footer>
 
 </body>
