@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kuchnie Świata</title>
+
+<style>
+/* Reset podstawowy */
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    background: #f0f2f5;
+    color: #333;
+}
+
+/* Nagłówek */
+header{
+    background: linear-gradient(135deg, #ff8c42, #ff3c38);
+    color:white;
+    text-align:center;
+    padding:40px 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+header h1{
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+}
+
+header p{
+    font-size: 1.2rem;
+}
+
+/* Kontener główny */
+.container{
+    width: 90%;
+    max-width: 1200px;
+    margin:auto;
+    padding:40px 0;
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+/* Karty kuchni */
+.kraj{
+    background:white;
+    border-radius:15px;
+    padding:25px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.kraj:hover{
+    transform: translateY(-5px);
+    box-shadow:0 12px 25px rgba(0,0,0,0.15);
+}
+
+.kraj h2{
+    font-size: 1.5rem;
+    margin-bottom:10px;
+    color:#ff6f3c;
+}
+
+.kraj h3{
+    font-size:1.1rem;
+    margin:15px 0 5px;
+    color:#ff8c42;
+}
+
+.kraj ul{
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-bottom:10px;
+}
+
+/* Stopka */
+footer{
+    background:#333;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
+    font-size:0.9rem;
+}
+
+/* Responsywność */
+@media(max-width:600px){
+    header h1{
+        font-size:2rem;
+    }
+    header p{
+        font-size:1rem;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Kuchnie Świata 🌍</h1>
+<p>10 krajów z ich najpopularniejszymi daniami i przepisami</p>
+</header>
+
+<div class="container">
+
+<div class="kraj">
+<h2>🇮🇹 Włochy – Pizza</h2>
+<h3>Składniki:</h3>
+<ul>
+<li>ciasto na pizzę</li>
+<li>sos pomidorowy</li>
+<li>ser mozzarella</li>
+<li>ulubione dodatki</li>
+</ul>
+<h3>Przygotowanie:</h3>
+<p>Rozwałkuj ciasto, posmaruj sosem pomidorowym, dodaj ser i dodatki. Piecz 12-15 minut w 220°C.</p>
+</div>
+
+<div class="kraj">
+<h2>🇯🇵 Japonia – Sushi</h2>
+<h3>Składniki:</h3>
+<ul>
+<li>ryż do sushi</li>
+<li>nori</li>
+<li>łosoś lub warzywa</li>
+<li>sos sojowy</li>
+</ul>
+<h3>Przygotowanie:</h3>
+<p>Ugotuj ryż, rozłóż na nori, dodaj rybę lub warzywa, zwiń w rolkę i pokrój na kawałki.</p>
+</div>
+
+<div class="kraj">
+<h2>🇲🇽 Meksyk – Tacos</h2>
+<h3>Składniki:</h3>
+<ul>
+<li>tortille kukurydziane</li>
+<li>mięso mielone</li>
+<li>sałata</li>
+<li>ser</li>
+<li>sos salsa</li>
+</ul>
+<h3>Przygotowanie:</h3>
+<p>Usmaż mięso z przyprawami, włóż do tortilli i dodaj warzywa oraz sos.</p>
+</div>
+
+<div class="kraj">
+<h2>🇪🇸 Hiszpania – Paella</h2>
+<h3>Składniki:</h3>
+<ul>
+<li>ryż</li>
+<li>kurczak lub owoce morza</li>
+<li>papryka</li>
+<li>szafran</li>
+</ul>
+<h3>Przygotowanie:</h3>
+<p>Podsmaż mięso i warzywa, dodaj ryż i przyprawy, zalej wodą i gotuj aż ryż wchłonie płyn.</p>
+</div>
+
+<div class="kraj">
+<h2>🇵🇱 Polska – Pierogi</h2>
+<h3>Składniki:</h3>
+<ul>
+<li>mąka</li>
+<li>woda</li>
+<li>ziemniaki</li>
+<li>twaróg</li>
+<li>cebula</li>
+</ul>
+<h3>Przygotowanie:</h3>
+<p>Zrób ciasto z mąki i wody. Przygotuj farsz z ziemniaków i twarogu. Lep pierogi i gotuj w osolonej wodzie.</p>
+</div>
+
+<div class="kraj">
+<h2>🇮🇳 Indie – Curry</h2>
+<h3>Składniki:</h3>
+<ul>
+<li>kurczak</li>
+<li>mleko kokosowe</li>
+<li>pasta curry</li>
+<li>ryż</li>
+</ul>
+<h3>Przygotowanie:</h3>
+<p>Podsmaż kurczaka, dodaj pastę curry i mleko kokosowe. Gotuj kilka minut i podawaj z ryżem.</p>
+</div>
+
+<div class="kraj">
+<h2>🇹🇷 Turcja – Kebab</h2>
+<h3>Składniki:</h3>
+<ul>
+<li>mięso (kurczak lub wołowina)</li>
+<li>pita</li>
+<li>warzywa</li>
+<li>sos czosnkowy</li>
+</ul>
+<h3>Przygotowanie:</h3>
+<p>Usmaż mięso z przyprawami, włóż do pity z warzywami i polej sosem.</p>
+</div>
+
+<div class="kraj">
+<h2>🇹🇭 Tajlandia – Pad Thai</h2>
+<h3>Składniki:</h3>
+<ul>
+<li>makaron ryżowy</li>
+<li>kurczak lub krewetki</li>
+<li>jajko</li>
+<li>warzywa</li>
+</ul>
+<h3>Przygotowanie:</h3>
+<p>Podsmaż składniki na patelni, dodaj ugotowany makaron i sos Pad Thai.</p>
+</div>
+
+<div class="kraj">
+<h2>🇨🇳 Chiny – Chow Mein</h2>
+<h3>Składniki:</h3>
+<ul>
+<li>makaron</li>
+<li>warzywa</li>
+<li>kurczak</li>
+<li>sos sojowy</li>
+</ul>
+<h3>Przygotowanie:</h3>
+<p>Usmaż warzywa i mięso, dodaj makaron i sos sojowy, wszystko dokładnie wymieszaj.</p>
+</div>
+
+<div class="kraj">
+<h2>🇫🇷 Francja – Croissant</h2>
+<h3>Składniki:</h3>
+<ul>
+<li>ciasto francuskie</li>
+<li>masło</li>
+</ul>
+<h3>Przygotowanie:</h3>
+<p>Pokrój ciasto na trójkąty, zwiń w kształt rogalika i piecz około 15 minut w 200°C.</p>
+</div>
+
+</div>
+
+<footer>
+<p>© 2026 Kuchnie Świata</p>
+</footer>
+
+</body>
+</html>
